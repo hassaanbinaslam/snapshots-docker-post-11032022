@@ -3,6 +3,7 @@
 
 from datetime import datetime
 import time
+import platform
 import commons.logger as logger
 
 
@@ -13,7 +14,7 @@ def main():
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
         # prepare message
-        msg = f"hello world at {dt_string}"
+        msg = f"hello world at {dt_string} from {platform.system()}"
 
         # put message to stdout and logs
         print(msg)
